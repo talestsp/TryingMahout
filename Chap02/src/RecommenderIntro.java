@@ -10,18 +10,25 @@ import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 import org.apache.mahout.cf.taste.recommender.Recommender;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
+import org.apache.mahout.math.Arrays;
 
 public class RecommenderIntro {
+	
+	final static int userId = 2;
 
 	public static void main(String[] args) throws Exception {
+		//all the preference, user, and item data needed in the	computation
 		DataModel model = new FileDataModel(new File("csv/intro.csv"));
+				
 		UserSimilarity similarity = new PearsonCorrelationSimilarity(model);
-		UserNeighborhood neighborhood = new NearestNUserNeighborhood(2,
-				similarity, model);
-		Recommender recommender = new GenericUserBasedRecommender(model,
-				neighborhood, similarity);
+		
+		UserNeighborhood neighborhood = new NearestNUserNeighborhood(2, similarity, model);
+		
+		System.out.println(Arrays.toString(neighborhood.getUserNeighborhood(userId)));
+		
+		Recommender recommender = new GenericUserBasedRecommender(model, neighborhood, similarity);
 
-		List<RecommendedItem> recommendations = recommender.recommend(1, 1);
+		List<RecommendedItem> recommendations = recommender.recommend(userId, 2);
 
 		for (RecommendedItem recommendation : recommendations) {
 			System.out.println(recommendation);
