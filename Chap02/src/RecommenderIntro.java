@@ -14,7 +14,7 @@ import org.apache.mahout.math.Arrays;
 
 public class RecommenderIntro {
 	
-	final static int userId = 2;
+	final static int userId = 1;
 
 	public static void main(String[] args) throws Exception {
 		//all the preference, user, and item data needed in the	computation
@@ -28,7 +28,7 @@ public class RecommenderIntro {
 		
 		Recommender recommender = new GenericUserBasedRecommender(model, neighborhood, similarity);
 
-		List<RecommendedItem> recommendations = recommender.recommend(userId, 2);
+		List<RecommendedItem> recommendations = recommender.recommend(userId, 3);
 
 		for (RecommendedItem recommendation : recommendations) {
 			System.out.println(recommendation);
