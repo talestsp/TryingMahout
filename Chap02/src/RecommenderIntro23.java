@@ -1,4 +1,12 @@
 import java.io.File;
+
+/**
+ * Mahout in Action
+ * Session 2.3 - Configuring and running an evaluation of a recommender
+ * @author tales tenorio pimentel
+ *
+ */
+
 import java.io.IOException;
 
 import org.apache.mahout.cf.taste.common.TasteException;
@@ -16,7 +24,7 @@ import org.apache.mahout.cf.taste.recommender.Recommender;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 import org.apache.mahout.common.RandomUtils;
 
-public class RecommenderIntro2 {
+public class RecommenderIntro23 {
 
 	public static void main(String[] args) throws IOException {
 

@@ -16,6 +16,12 @@ import org.apache.mahout.cf.taste.recommender.Recommender;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 import org.apache.mahout.common.RandomUtils;
 
+/**
+ * Mahout in Action
+ * Session 2.4 - Configuring and running a precision and recall evaluation
+ * @author tales tenorio pimentel
+ *
+ */
 
 public class RecommenderIntro24 {
 

@@ -12,7 +12,14 @@ import org.apache.mahout.cf.taste.recommender.Recommender;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 import org.apache.mahout.math.Arrays;
 
-public class RecommenderIntro {
+/**
+ * Mahout in Action
+ * Session 2.2 - A simple user-based recommender program with Mahout
+ * @author tales tenorio pimentel
+ *
+ */
+
+public class RecommenderIntro22 {
 	
 	final static int userId = 1;
 
