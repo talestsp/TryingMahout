@@ -1,3 +1,4 @@
+package chap02;
 import java.io.File;
 import java.io.IOException;
 
@@ -31,11 +32,12 @@ public class RecommenderIntro24 {
 
 		RandomUtils.useTestSeed();
 		DataModel model = new FileDataModel(new File("csv/intro.csv"));
+		
 		RecommenderIRStatsEvaluator evaluator = new GenericRecommenderIRStatsEvaluator();
+		//recommender builder para avaliar o recommender
 		RecommenderBuilder recommenderBuilder = new RecommenderBuilder() {
 			@Override
-			public Recommender buildRecommender(DataModel model)
-					throws TasteException {
+			public Recommender buildRecommender(DataModel model) throws TasteException {
 				UserSimilarity similarity = new PearsonCorrelationSimilarity(
 						model);
 				UserNeighborhood neighborhood = new NearestNUserNeighborhood(2,

@@ -1,3 +1,4 @@
+package chap02;
 import java.io.File;
 import java.util.List;
 
@@ -40,5 +41,12 @@ public class RecommenderIntro22 {
 		for (RecommendedItem recommendation : recommendations) {
 			System.out.println(recommendation);
 		}
+		
+		recommender.refresh(null);		
+		
+		for (RecommendedItem recommendation : recommendations) {
+			System.out.println(recommendation);
+		}
+		
 	}
 }
